@@ -1,0 +1,25 @@
+.background_map_control {
+    position: absolute;
+    bottom: 5em;
+    left: 0;
+    height: auto;
+    padding: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 1px gray;
+    z-index: 100;
+
+    .title {
+        font-weight: bold;
+    }
+
+    .item {
+        border-top: 1px solid gray;
+        cursor: pointer;
+        &.selected {
+            font-weight: bold;
+        }
+    }
+}

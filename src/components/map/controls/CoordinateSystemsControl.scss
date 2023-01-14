@@ -1,0 +1,13 @@
+.coordinate_systems_control {
+    position: absolute;
+    top: .4em;
+    left: 4em;
+    bottom: 2.2em;
+    overflow-y: scroll;
+    padding: 10px;
+    border-radius: 20px;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 1px gray;
+    z-index: 100;
+}
