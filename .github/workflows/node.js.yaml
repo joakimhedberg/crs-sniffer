@@ -18,7 +18,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+      - run: npm ci
       - run: yarn run build --if-present
-        env:
-          CI: false
       - run: yarn test
