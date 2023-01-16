@@ -9,6 +9,7 @@ import './CoordinateSystemsControl.scss'
 const CoordinateSystemsControl = () => {
   const [coordinate_systems, setCoordinateSystems] = useState<CoordinateSystem[][]>([])
   const [selected_page, setSelectedPage] = useState<number>()
+  const [minimized, setMinimized] = useState(true)
 
   const [filter, setFilter] = useState('')
   const PAGE_COUNT = 20
@@ -31,25 +32,28 @@ const CoordinateSystemsControl = () => {
   }, [filter])
 
 
-  return <div className='coordinate_systems_control'>
-    <div style={{overflowX: 'scroll'}}>
-      <Pagination>
-        {coordinate_systems.map((vp, idx) => <Pagination.Item key={idx} onClick={() => setSelectedPage(idx)} active={selected_page === idx}>{idx + 1}</Pagination.Item>)}
-      </Pagination>
-    </div>
-    <div>
-      <Form.Control type='text' onChange={(e) => filterChangedTimeout(e.target.value)}/>
-    </div>
-    {
-      selected_page !== undefined && coordinate_systems[selected_page] && coordinate_systems[selected_page].map(res => (
-        <div key={res.epsgCode} style={{border: 'solid 1px black'}}>
-          <div>{res.epsgCode}</div>
-          <div>{res.name}</div>
-          <div>{res.area}</div>
-        </div>
+  return <div className={'coordinate_systems_control' + (minimized? ' minimized': '')}>
+    <div className='control_title' onClick={() => setMinimized(!minimized)}>Coordinate systems</div>
+    {!minimized && <div className='control_content'>
+      <div style={{ overflowX: 'scroll' }}>
+        <Pagination>
+          {coordinate_systems.map((vp, idx) => <Pagination.Item key={idx} onClick={() => setSelectedPage(idx)} active={selected_page === idx}>{idx + 1}</Pagination.Item>)}
+        </Pagination>
+      </div>
+      <div>
+        <Form.Control type='text' onChange={(e) => filterChangedTimeout(e.target.value)} />
+      </div>
+      {
+        selected_page !== undefined && coordinate_systems[selected_page] && coordinate_systems[selected_page].map(res => (
+          <div key={res.epsgCode} style={{ border: 'solid 1px black' }}>
+            <div>{res.epsgCode}</div>
+            <div>{res.name}</div>
+            <div>{res.area}</div>
+          </div>
         )
-      )
-    }
+        )
+      }
+    </div>}
   </div>
 }
 

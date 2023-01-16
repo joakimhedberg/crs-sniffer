@@ -8,6 +8,7 @@ const SnifferControl = () => {
 
   const snifferContext = useContext(CrsSnifferContext)
   return <div className='sniffer_control'>
+    <div className='control_title'>Coordinate sniffer</div>
     {!(snifferContext.results && snifferContext.results.length > 0)? <SnifferRunComponent/>:
     <SnifferResultsComponent/>}
   </div>
