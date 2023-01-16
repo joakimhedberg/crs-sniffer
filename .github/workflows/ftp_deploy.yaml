@@ -33,3 +33,4 @@ jobs:
         server-dir: ${{ secrets.SFTP_TARGET_PATH }}
         protocol: ftps
         port: 22
+        security: loose
