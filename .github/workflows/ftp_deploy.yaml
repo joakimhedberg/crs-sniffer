@@ -30,6 +30,6 @@ jobs:
         username: ${{ secrets.SFTP_HOSTNAME }}
         password: ${{ secrets.SFTP_PASS }}
         port: 22
-        protocol: sftp
+        protocol: ftps
         local-dir: 'build'
         server-dir: ${{ secrets.SFTP_TARGET_PATH }}
