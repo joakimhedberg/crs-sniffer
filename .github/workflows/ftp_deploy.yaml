@@ -24,7 +24,7 @@ jobs:
       run: find build/ -print
     
     - name: Deploy to server
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         server: ${{ secrets.SFTP_USER }}
         username: ${{ secrets.SFTP_HOSTNAME }}
@@ -33,3 +33,4 @@ jobs:
         protocol: ftps
         local-dir: 'build/'
         server-dir: ${{ secrets.SFTP_TARGET_PATH }}
+        git-ftp-args: --insecure
