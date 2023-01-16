@@ -23,9 +23,11 @@ jobs:
     - name: List build files
       run: find build/ -print
     
-    - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+    - name: Deploy to server
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        server: ${{ secrets.SFTP_HOSTNAME }}
         username: ${{ secrets.SFTP_USER }}
+        server: ${{ secrets.SFTP_HOSTNAME }}
         password: ${{ secrets.SFTP_PASS }}
+        local_path: './build'
+        remote_path: ${{ secrets.SFTP_TARGET_PATH }}
