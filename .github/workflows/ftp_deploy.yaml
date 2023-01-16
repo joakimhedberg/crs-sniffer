@@ -26,8 +26,8 @@ jobs:
     - name: Deploy to server
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        server: ${{ secrets.SFTP_USER }}
-        username: ${{ secrets.SFTP_HOSTNAME }}
+        server: ${{ secrets.SFTP_HOSTNAME }}
+        username: ${{ secrets.SFTP_USER }}
         password: ${{ secrets.SFTP_PASS }}
         local-dir: 'build/'
         protocol: ftps-legacy
