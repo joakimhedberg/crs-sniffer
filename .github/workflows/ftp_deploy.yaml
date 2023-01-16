@@ -24,10 +24,12 @@ jobs:
       run: find build/ -print
     
     - name: Deploy to server
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        username: ${{ secrets.SFTP_USER }}
-        server: ${{ secrets.SFTP_HOSTNAME }}
+        server: ${{ secrets.SFTP_USER }}
+        username: ${{ secrets.SFTP_HOSTNAME }}
         password: ${{ secrets.SFTP_PASS }}
-        local_path: './build'
-        remote_path: ${{ secrets.SFTP_TARGET_PATH }}
+        port: 22
+        protocol: sftp
+        local-dir: 'build'
+        server-dir: ${{ secrets.SFTP_TARGET_PATH }}
