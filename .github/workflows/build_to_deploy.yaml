@@ -1,11 +1,12 @@
-name: Deploy to web server
+# Will build the code and commit the built code to the gh-pages branch where it will be deployed to github-pages
+name: Deploy to web
 on:
   push:
-    branches: [main]
+    branches: [deploy]
 permissions:
   contents: write
 jobs:
-  web-deploy:
+  create-build:
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
