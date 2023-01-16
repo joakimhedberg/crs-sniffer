@@ -2,7 +2,8 @@ name: Deploy to web server
 on:
   push:
     branches: [main]
-  
+permissions:
+  contents: write
 jobs:
   web-deploy:
     runs-on: ubuntu-latest
@@ -19,11 +20,10 @@ jobs:
       run: |
         npm install
         yarn run build
-    
-    - name: List build files
-      run: find build/ -print
-    
+   
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
+        branch: main
         folder: build
+        ssh-key: ${{ secrets.DEPLOY_KEY }}
