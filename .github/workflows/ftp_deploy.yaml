@@ -26,11 +26,8 @@ jobs:
     - name: Deploy to server
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        server: ${{ secrets.SFTP_USER }}
-        username: ${{ secrets.SFTP_HOSTNAME }}
-        password: ${{ secrets.SFTP_PASS }}
-        port: 22
-        protocol: ftps
+        ftp-server: ${{ secrets.SFTP_USER }}
+        ftp-username: ${{ secrets.SFTP_HOSTNAME }}
+        ftp-password: ${{ secrets.SFTP_PASS }}
         local-dir: 'build/'
-        server-dir: ${{ secrets.SFTP_TARGET_PATH }}
         git-ftp-args: --insecure
