@@ -31,5 +31,5 @@ jobs:
         password: ${{ secrets.SFTP_PASS }}
         local-dir: 'build/'
         server-dir: ${{ secrets.SFTP_TARGET_PATH }}
-        protocol: ftps-legacy
+        protocol: ftps
         port: 22
