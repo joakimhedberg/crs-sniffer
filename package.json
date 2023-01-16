@@ -36,8 +36,6 @@
     "wkt": "^0.1.1"
   },
   "scripts": {
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --verbose --transformIgnorePatterns \"node_modules/(?!@codemirror)/\"",
@@ -62,7 +60,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
     "resize-observer-polyfill": "^1.5.1"
   }
 }

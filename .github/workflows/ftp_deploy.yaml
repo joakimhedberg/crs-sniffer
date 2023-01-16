@@ -1,0 +1,31 @@
+name: Deploy to web server
+on:
+  push:
+    branches: [deploy]
+  
+jobs:
+  web-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+    
+    - name: Use node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+      
+    - name: Build project
+      run: |
+        npm install
+        yarn run build
+    
+    - name: List build files
+      run: find build/ -print
+    
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.SFTP_HOSTNAME }}
+        username: ${{ secrets.SFTP_USER }}
+        password: ${{ secrets.SFTP_PASS }}
