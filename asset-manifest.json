@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.css": "/crs-sniffer/static/css/main.28e673d9.css",
-    "main.js": "/crs-sniffer/static/js/main.00fb42d2.js",
+    "main.css": "/crs-sniffer/static/css/main.69c1a4c5.css",
+    "main.js": "/crs-sniffer/static/js/main.161b7f43.js",
     "static/js/787.42088c5b.chunk.js": "/crs-sniffer/static/js/787.42088c5b.chunk.js",
+    "static/media/example_show_crs_bounding_box.png": "/crs-sniffer/static/media/example_show_crs_bounding_box.c8421ac225e30a5d6180.png",
+    "static/media/0_entire_map.png": "/crs-sniffer/static/media/0_entire_map.c6a190c413ae1dff2c4e.png",
+    "static/media/example_result_reference_polygon.png": "/crs-sniffer/static/media/example_result_reference_polygon.0e5be3a0acf6d98dabd7.png",
+    "static/media/example_result_reference_point.png": "/crs-sniffer/static/media/example_result_reference_point.fdf082485e01799f6dab.png",
+    "static/media/2_coordinate_systems.png": "/crs-sniffer/static/media/2_coordinate_systems.69a356d141c78786d76d.png",
+    "static/media/3_crs_sniffer.png": "/crs-sniffer/static/media/3_crs_sniffer.01aaf7858c379e5069fc.png",
     "index.html": "/crs-sniffer/index.html",
-    "main.28e673d9.css.map": "/crs-sniffer/static/css/main.28e673d9.css.map",
-    "main.00fb42d2.js.map": "/crs-sniffer/static/js/main.00fb42d2.js.map",
+    "main.69c1a4c5.css.map": "/crs-sniffer/static/css/main.69c1a4c5.css.map",
+    "main.161b7f43.js.map": "/crs-sniffer/static/js/main.161b7f43.js.map",
     "787.42088c5b.chunk.js.map": "/crs-sniffer/static/js/787.42088c5b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28e673d9.css",
-    "static/js/main.00fb42d2.js"
+    "static/css/main.69c1a4c5.css",
+    "static/js/main.161b7f43.js"
   ]
 }
