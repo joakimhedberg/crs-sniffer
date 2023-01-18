@@ -11,6 +11,6 @@ interface IMapContext {
 
 const MapContext = React.createContext<IMapContext>({
   selected_background: 'OSM',
-  setSelectedBackground: () => { }
+  setSelectedBackground: () => { },
 })
 export default MapContext

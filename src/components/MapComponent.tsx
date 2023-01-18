@@ -2,6 +2,8 @@ import { Geometry, Point, Polygon } from 'ol/geom'
 import { useState } from 'react'
 import CrsSnifferResult from '../classes/crs/CoordinateSnifferResult'
 import CrsSnifferContext from '../context/CrsSnifferContext'
+import HelpButtonControl from './help/HelpButtonControl'
+import HelpSectionsControl from './help/HelpSectionsControl'
 import MapBaseComponent from './map/base/MapBaseComponent'
 import BackgroundMapSelectionControl from './map/controls/BackgroundMapSelectionControl'
 import ControlsComponent from './map/controls/ControlsComponent'
@@ -52,6 +54,8 @@ const MapComponent = () => {
         <BackgroundMapComponent/>
       </MapLayersComponent>
       <ControlsComponent>
+        <HelpSectionsControl/>
+        <HelpButtonControl/>
         <FullScreenControl />
         <CoordinateSystemsControl/>
         <ZoomControlControl />

@@ -1,7 +1,7 @@
 {
   "homepage": "https://joakimhedberg.github.io/crs-sniffer",
   "name": "crs_sniffer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -40,7 +40,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --verbose --transformIgnorePatterns \"node_modules/(?!@codemirror)/\"",
+    "test": "react-scripts test --verbose --transformIgnorePatterns \"node_modules/(?!@codemirror)/\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -8,6 +8,7 @@ import MapContext, { BackgroundMapType } from '../../../context/MapContext'
 import { IExtents } from '../../../interfaces/map/IExtents'
 
 import { Attribution } from 'ol/control'
+import HelpContext from '../../../context/HelpContext'
 
 
 interface IMapComponentProps {
@@ -18,6 +19,8 @@ interface IMapComponentProps {
 const MapBaseComponent = (p: React.PropsWithChildren<IMapComponentProps>) => {
   const [map, setMap] = useState<ol.Map>()
   const [selected_background, setSelectedBackground] = useState<BackgroundMapType>('OSM')
+  const [is_help_enabled, setIsHelpEnabled] = useState(false)
+
   const mapElement = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -41,14 +44,16 @@ const MapBaseComponent = (p: React.PropsWithChildren<IMapComponentProps>) => {
   }, [map])
 
   return (
-    <MapContext.Provider value={{
+    <MapContext.Provider value={{    
       map: map,
       selected_background: selected_background,
       setSelectedBackground: setSelectedBackground
     }}>
-      <div ref={mapElement} data-testid='map_base_div' className='ol-map'>
+      <HelpContext.Provider value={{is_help_visible: is_help_enabled, setIsHelpVisible: setIsHelpEnabled}}>
+        <div ref={mapElement} data-testid='map_base_div' className='ol-map'>
         {p.children}
-      </div>
+        </div>
+      </HelpContext.Provider>
     </MapContext.Provider>
   )
 }
