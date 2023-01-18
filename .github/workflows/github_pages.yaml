@@ -15,7 +15,7 @@ jobs:
     - name: Use node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'
+        node-version: '19'
       
     - name: Build project
       run: |
