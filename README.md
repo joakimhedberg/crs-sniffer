@@ -2,6 +2,8 @@
 Every gotten a file with an unknown coordinate system?
 This is a tool to guide and help you to figure out the correct crs.
 
+Try it out here: https://joakimhedberg.github.io/crs-sniffer/
+
 ## Available Scripts
 
 ### `yarn start`
