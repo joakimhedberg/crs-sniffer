@@ -1,40 +1,32 @@
-# Coordinate system sniffer
-Every gotten a file with an unknown coordinate system?
-This is a tool to guide and help you to figure out the correct crs.
+# Coordinate System Sniffer  
 
-Try it out here: https://joakimhedberg.github.io/crs-sniffer/
+Ever received a file with an unknown coordinate system?  
+This tool helps you identify the correct **Coordinate Reference System (CRS)**.  
 
-## Available Scripts
+🔗 **Try it out here:** [Coordinate System Sniffer](https://joakimhedberg.github.io/crs-sniffer/)  
 
-### `yarn start`
+## Available Scripts  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `yarn start`  
+Runs the app in development mode.  
+Open [http://localhost:3000](http://localhost:3000) in your browser to view it.  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The page will reload when you make edits, and any lint errors will be displayed in the console.  
 
-### `yarn test`
+### `yarn test`  
+Launches the test runner in interactive watch mode.  
+See [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more details.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `yarn build`  
+Builds the app for production and outputs it to the `build` folder.  
+The build is optimized for the best performance—minified and with hashed filenames.  
 
-### `yarn build`
+Your app is now ready for deployment!  
+See [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more details.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `yarn eject`  
+⚠️ **Warning: This is a one-way operation!**  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you need full control over the build configuration, you can `eject`. This will copy all dependencies (Webpack, Babel, ESLint, etc.) directly into your project, removing the single build dependency.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Once you `eject`, you cannot undo this action. However, for most projects, the default configuration should be sufficient.  
